@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="">
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+   
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <script type="text/javascript" src="./assets/css/bootstrap.min.css"></script>
+    <script type="text/javascript" src="./assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<!-- jQuery -->
+    <script type="text/javascript" src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+        <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+		
+		<!-- Slimscroll JS -->
+        <script type="text/javascript" src="./assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <!-- Custom JS -->
+		<!-- <script  type="text/javascript" src="./assets/js/script.js"></script> -->
+
+
+    <title>Mern Admin Page</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Sales', ],
+          ['Jan',  500,      ],
+          ['Feb',  1200,      ],
+          ['Mar',  1800,       ],
+          ['Apr',  2000,      ],
+          ['May',  2000,      ],
+          ['June',  1800,      ],
+          ['July',  2800,       ],
+          ['Aug',  4000,      ],
+          ['Sept',  1300,      ]
+        ]);
+
+        var options = {
+          title: 'Wallet Analysis',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      
+    </div>
+    
+  </body>
+</html>
